@@ -1,5 +1,6 @@
 import React from 'react';
 import { Jumbotron, Container, Image } from 'react-bootstrap';
+import './footer.css';
 
 export const Header = () => (
     <Jumbotron fluid className="jumbo">
@@ -9,18 +10,6 @@ export const Header = () => (
             <p>I am Michal Simyan and this is my website</p>
         </Container>
     </Jumbotron>
-)
-
-export const Footer2 = () => (
-    <footer>
-        <Jumbotron fluid className="jumbo footer">
-            <div className="overlay"></div>
-            <Container>
-                <h4>copyright and shit</h4>
-                <p>here are some <a href="/">links</a> to places</p>
-            </Container>
-        </Jumbotron>
-    </footer>
 )
 
 export const Footer = () => (
