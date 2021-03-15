@@ -5,7 +5,7 @@ const Article = (props) => (
     <section>
         <CloseButton onClick={props.closeArticle}>Close</CloseButton>
         <ResponsiveEmbed>
-            <iframe title="article" /*style={{border:"1px solid black"}}*/ src={props.src}></iframe>
+            <iframe title="article" scrolling="no" /*style={{border:"1px solid black"}}*/ src={props.src}></iframe>
         </ResponsiveEmbed>
     </section>
 )

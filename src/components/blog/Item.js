@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button'
 import './item.css'
 
 const Item = (props) => {
-    console.log(props.color)
     return (
         <Card style={{backgroundColor: props.color}}>
             <Card.Img variant="top" src="" />

@@ -6,7 +6,7 @@ const NavBar = () => {
     const scrollToHome = () => document.getElementById("homeSection")?.scrollIntoView({behavior: "smooth"})
     const scrollToAbout = () => document.getElementById("aboutSection")?.scrollIntoView({behavior: "smooth"})
     const scrollToContact = () => document.getElementById("contactSection")?.scrollIntoView({behavior: "smooth"})
-    const scrollToTopBlog = () => document.getElementsByTagName("section")[0]?.scrollIntoView({behavior: "smooth"})
+    const scrollToTopBlog = () => document.getElementById("blogSection")?.scrollIntoView({behavior: "smooth"})
 
     return (
         <Navbar variant="light" expand="lg" sticky="top">
