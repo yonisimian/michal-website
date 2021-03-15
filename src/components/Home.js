@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Home = () => (
-    <div>
+const Home = () => (
+    <>
         <p>home</p>
         <p>
             bla bla bla bla bla bla bla bla bla<br />
@@ -14,5 +14,7 @@ export const Home = () => (
             bla bla bla bla bla bla bla bla bla<br/>
             bla bla bla
         </p>
-    </div>
+    </>
 )
+
+export default Home;

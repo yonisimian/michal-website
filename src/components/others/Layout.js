@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { NavBar } from './NavBar'
+import NavBar from './NavBar'
 import { Header, Footer } from './Utils'
 
-export const Layout = (props) => (
+const Layout = (props) => (
     <>
         <NavBar />
         <Header />
@@ -13,3 +13,5 @@ export const Layout = (props) => (
         <Footer />
     </>
 )
+
+export default Layout;
