@@ -13,6 +13,8 @@
   color: white;
 }
 
-a {
+.navbar a {
   color: #343a40;
+  text-decoration: none!important;
+  margin: 4px 9px 4px 9px;
 }

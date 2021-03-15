@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import { Nav, Navbar/*, NavDropdown*/ } from 'react-bootstrap';
 
 const NavBar = () => {
-    const slideToHome = () => document.getElementById("homeSection")?.scrollIntoView({behavior: "smooth"})
-    const slideToAbout = () => document.getElementById("aboutSection")?.scrollIntoView({behavior: "smooth"})
-    const slideToContact = () => document.getElementById("contactSection")?.scrollIntoView({behavior: "smooth"})
+    const scrollToHome = () => document.getElementById("homeSection")?.scrollIntoView({behavior: "smooth"})
+    const scrollToAbout = () => document.getElementById("aboutSection")?.scrollIntoView({behavior: "smooth"})
+    const scrollToContact = () => document.getElementById("contactSection")?.scrollIntoView({behavior: "smooth"})
+    const scrollToTopBlog = () => document.getElementsByTagName("section")[0]?.scrollIntoView({behavior: "smooth"})
 
     return (
         <Navbar variant="light" expand="lg" sticky="top">
@@ -13,13 +14,8 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-                <Nav.Link>
-                    <Link to="/">Home</Link>
-                    {/* <a onClick={slideToHome}>Home</a> */}
-                </Nav.Link>
-                <Nav.Link>
-                    <a onClick={slideToAbout}>About</a>
-                </Nav.Link>
+                <NavLink to="/" onClick={scrollToHome}>Home</NavLink>
+                <NavLink to="/" onClick={scrollToAbout}>About</NavLink>
                 {/* <NavDropdown title={<span className="text-dark">Dropdown</span>} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -27,21 +23,11 @@ const NavBar = () => {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown> */}
-                <Nav.Link>
-                    <Link to="/">סדנאות ריצה</Link>
-                </Nav.Link>
-                <Nav.Link>
-                    <Link to="/">אימוני כושר לארגונים</Link>
-                </Nav.Link>
-                <Nav.Link>
-                    <Link to="/">קבוצות ריצה למתחילים</Link>
-                </Nav.Link>
-                <Nav.Link>
-                    <Link to="/Blog">Blog</Link>
-                </Nav.Link>
-                <Nav.Link>
-                    <a onClick={slideToContact}>Contact Us</a>
-                </Nav.Link>
+                <NavLink to="/">סדנאות ריצה</NavLink>
+                <NavLink to="/">אימוני כושר לארגונים</NavLink>
+                <NavLink to="/">קבוצות ריצה למתחילים</NavLink>
+                <NavLink to="/Blog" onClick={scrollToTopBlog}>Blog</NavLink>
+                <NavLink to="/" onClick={scrollToContact}>Contact Us</NavLink>
             </Nav>
             </Navbar.Collapse>
         </Navbar>

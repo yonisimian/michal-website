@@ -3,8 +3,9 @@ import Button from 'react-bootstrap/Button'
 import './item.css'
 
 const Item = (props) => {
+    console.log(props.color)
     return (
-        <Card>
+        <Card style={{backgroundColor: props.color}}>
             <Card.Img variant="top" src="" />
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
