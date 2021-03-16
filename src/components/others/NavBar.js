@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Nav, Navbar/*, NavDropdown*/, Image } from 'react-bootstrap';
 import logo from '../../assets/logo-monochrome.svg'
-import { scrollToElementID } from './Utils'
+import { scrollToElementID, scrollToTop } from './Utils'
 
 const NavBar = () => {
 
@@ -27,9 +27,9 @@ const NavBar = () => {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown> */}
-                <NavLink to="/">Running Workshops</NavLink>
-                <NavLink to="/">Fitness training for organizations</NavLink>
-                <NavLink to="/">Running groups for beginners</NavLink>
+                <NavLink to="/page1" onClick={scrollToTop}>Running Workshops</NavLink>
+                <NavLink to="/page2" onClick={scrollToTop}>Fitness training for organizations</NavLink>
+                <NavLink to="/page3" onClick={scrollToTop}>Running groups for beginners</NavLink>
                 <NavLink to="/Blog" onClick={scrollToTopBlog}>Blog</NavLink>
                 <NavLink to="/" onClick={scrollToContact}>Contact Us</NavLink>
             </Nav>

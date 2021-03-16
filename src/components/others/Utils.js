@@ -48,3 +48,5 @@ export const scrollToElementID = (id) => {
     })
     observer.observe(document.body, {attributes: false, childList: true, subtree: true })
 }
+
+export const scrollToTop = () => window.scrollTo({top: 0, behavior: "smooth"})
