@@ -22,12 +22,29 @@ export const Footer = () => (
             <Link to="#"><i className="icon ion-social-facebook" /></Link>
         </div>
         <ul className="list-inline">
-            <li className="list-inline-item"><Link to="/">Home</Link></li>
-            <li className="list-inline-item"><Link to="/">About</Link></li>
-            <li className="list-inline-item"><Link to="/">Contact</Link></li>
-            <li className="list-inline-item"><Link to="/Blog">Blog</Link></li>
+            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("homeSection")}>Home</Link></li>
+            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("aboutSection")}>About</Link></li>
+            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("contactSection")}>Contact</Link></li>
+            <li className="list-inline-item"><Link to="/Blog" onClick={() => scrollToElementID("blogSection")}>Blog</Link></li>
             <li className="list-inline-item"><Link to="#">Privacy Policy</Link></li>
         </ul>
         <p className="copyright">Yehonatan Simian © 2021</p>
     </footer>
 )
+
+export const scrollToElementID = (id) => {
+    const el = document.getElementById(id)
+    if (el) {
+        el.scrollIntoView({behavior: "smooth"})
+        return
+    }
+
+    const observer = new MutationObserver(() => {
+        let el2 = document.getElementById(id)
+        if (el2) {
+            el2.scrollIntoView({behavior: "smooth"})
+            observer.disconnect()
+        }
+    })
+    observer.observe(document.body, {attributes: false, childList: true, subtree: true })
+}
