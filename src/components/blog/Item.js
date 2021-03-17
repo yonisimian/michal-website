@@ -9,7 +9,7 @@ const Item = (props) => {
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>{props.summary}</Card.Text>
-                <Button variant="primary" onClick={props.setArticle}>To The Article -&gt;</Button>
+                <Button variant="primary" onClick={props.setArticle}>לקריאת המאמר -&gt;</Button>
             </Card.Body>
         </Card>
     )

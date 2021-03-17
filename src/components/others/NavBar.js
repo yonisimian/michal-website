@@ -18,8 +18,8 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-                <NavLink to="/" onClick={scrollToHome}>Home</NavLink>
-                <NavLink to="/" onClick={scrollToAbout}>About</NavLink>
+                <NavLink to="/" onClick={scrollToHome}>בית</NavLink>
+                <NavLink to="/" onClick={scrollToAbout}>אודות</NavLink>
                 {/* <NavDropdown title={<span className="text-dark">Dropdown</span>} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -27,11 +27,11 @@ const NavBar = () => {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown> */}
-                <NavLink to="/page1" onClick={scrollToTop}>Running Workshops</NavLink>
-                <NavLink to="/page2" onClick={scrollToTop}>Fitness training for organizations</NavLink>
-                <NavLink to="/page3" onClick={scrollToTop}>Running groups for beginners</NavLink>
-                <NavLink to="/Blog" onClick={scrollToTopBlog}>Blog</NavLink>
-                <NavLink to="/" onClick={scrollToContact}>Contact Us</NavLink>
+                <NavLink to="/page1" onClick={scrollToTop}>סדנאות ריצה</NavLink>
+                <NavLink to="/page2" onClick={scrollToTop}>אימוני כושר לארגונים</NavLink>
+                <NavLink to="/page3" onClick={scrollToTop}>קבוצות ריצה למתחילים</NavLink>
+                <NavLink to="/Blog" onClick={scrollToTopBlog}>בלוג</NavLink>
+                <NavLink to="/" onClick={scrollToContact}>צרו קשר</NavLink>
             </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Jumbotron, Container } from 'react-bootstrap'
-import './footer.css'
+import './utils.css'
 
 export const Header = () => (
     <Jumbotron fluid className="jumbo">
         <div className="overlay"></div>
         <Container>
-            <h1>Welcome</h1>
-            <p>I am Michal Simyan and this is my website</p>
+            <h1>ברוכים הבאים!</h1>
+            <p>אני מיכל סימיאן וזה האתר שלי</p>
         </Container>
     </Jumbotron>
 )
@@ -22,11 +22,11 @@ export const Footer = () => (
             <Link to="#"><i className="icon ion-social-facebook" /></Link>
         </div>
         <ul className="list-inline">
-            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("homeSection")}>Home</Link></li>
-            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("aboutSection")}>About</Link></li>
-            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("contactSection")}>Contact</Link></li>
-            <li className="list-inline-item"><Link to="/Blog" onClick={() => scrollToElementID("blogSection")}>Blog</Link></li>
-            <li className="list-inline-item"><Link to="#">Privacy Policy</Link></li>
+            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("homeSection")}>בית</Link></li>
+            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("aboutSection")}>אודות</Link></li>
+            <li className="list-inline-item"><Link to="/" onClick={() => scrollToElementID("contactSection")}>צרו קשר</Link></li>
+            <li className="list-inline-item"><Link to="/Blog" onClick={() => scrollToElementID("blogSection")}>בלוג</Link></li>
+            <li className="list-inline-item"><Link to="#">מדיניות הפרטיות</Link></li>
         </ul>
         <p className="copyright">Yehonatan Simian © 2021</p>
     </footer>
