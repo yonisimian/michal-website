@@ -13,19 +13,3 @@
   height: calc(10px + 4vmin);
   pointer-events: none;
 }
-
-
-.navbar {
-  background-color: rgba(200, 200, 255, 0.167);
-}
-
-.navbar .ml-auto {
-  margin-right: auto!important;
-  margin-left: 0!important;
-}
-
-.navbar a {
-  color: #343a40;
-  text-decoration: none!important;
-  margin: 4px 9px 4px 9px;
-}

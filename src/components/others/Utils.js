@@ -32,17 +32,30 @@ export const Footer = () => (
     </footer>
 )
 
+const getNavbarHeight = () => {
+    let nav = document.getElementsByClassName('navbar')[0]
+    if (!nav)
+        return
+
+    let navHeight = nav.offsetHeight
+    navHeight += parseInt(window.getComputedStyle(nav).getPropertyValue('padding-top'));
+    navHeight += parseInt(window.getComputedStyle(nav).getPropertyValue('padding-bottom'));
+    return (navHeight) ?? 0;
+}
+
 export const scrollToElementID = (id) => {
     const el = document.getElementById(id)
     if (el) {
-        el.scrollIntoView({behavior: "smooth"})
+        //el.scrollIntoView({behavior: "smooth"})
+        window.scrollTo({top: el.offsetTop - getNavbarHeight(), behavior: "smooth"})
         return
     }
 
     const observer = new MutationObserver(() => {
         let el2 = document.getElementById(id)
         if (el2) {
-            el2.scrollIntoView({behavior: "smooth"})
+            //el2.scrollIntoView({behavior: "smooth"})
+            window.scrollTo({top: el2.offsetTop - getNavbarHeight(), behavior: "smooth"})
             observer.disconnect()
         }
     })

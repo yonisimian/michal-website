@@ -1,3 +1,20 @@
+.navbar {
+  box-shadow: 0px 3px 5px grey;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.navbar .ml-auto {
+  margin-right: auto!important;
+  margin-left: 0!important;
+}
+
+.navbar a {
+  color: #343a40;
+  text-decoration: none!important;
+  margin: 2px 9px 2px 9px;
+}
+
 footer {
   padding:40px 0;
   background-color:#ffffff;
@@ -56,20 +73,4 @@ footer .copyright {
   font-size:13px;
   color:#aaa;
   margin-bottom:0;
-}
-
-
-.navbar {
-  background-color: rgba(200, 200, 255, 0.167);
-}
-
-.navbar .ml-auto {
-  margin-right: auto!important;
-  margin-left: 0!important;
-}
-
-.navbar a {
-  color: #343a40;
-  text-decoration: none!important;
-  margin: 4px 9px 4px 9px;
 }
