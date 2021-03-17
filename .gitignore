@@ -10,6 +10,7 @@
 
 # production
 # /build
+# ignoring build caused error: "The process '/usr/local/bin/npx' failed with exit code 1"
 
 # misc
 .DS_Store
