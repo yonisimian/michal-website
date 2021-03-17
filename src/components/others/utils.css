@@ -15,6 +15,10 @@
   margin: 2px 9px 2px 9px;
 }
 
+.jumbo {
+  margin: 0;
+}
+
 footer {
   padding:40px 0;
   background-color:#ffffff;

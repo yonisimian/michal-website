@@ -37,17 +37,15 @@ const getNavbarHeight = () => {
     if (!nav)
         return
 
-    let navHeight = nav.offsetHeight
-    navHeight += parseInt(window.getComputedStyle(nav).getPropertyValue('padding-top'));
-    navHeight += parseInt(window.getComputedStyle(nav).getPropertyValue('padding-bottom'));
-    return (navHeight) ?? 0;
+    let navHeight = parseFloat(window.getComputedStyle(nav).getPropertyValue('height'))
+    return (navHeight) ?? 0
 }
 
 export const scrollToElementID = (id) => {
     const el = document.getElementById(id)
     if (el) {
         //el.scrollIntoView({behavior: "smooth"})
-        window.scrollTo({top: el.offsetTop - getNavbarHeight(), behavior: "smooth"})
+        window.scrollTo({top: el.offsetTop - getNavbarHeight() , behavior: "smooth"})
         return
     }
 

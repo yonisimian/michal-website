@@ -3,6 +3,7 @@ import React from 'react'
 const Home = () => (
     <>
         <p>home</p>
+        <hr></hr>
         <p>
             bla bla bla bla bla bla bla bla bla<br />
             bla bla bla bla bla bla bla bla bla bla<br />
@@ -14,6 +15,7 @@ const Home = () => (
             bla bla bla bla bla bla bla bla bla<br/>
             bla bla bla
         </p>
+        bla
     </>
 )
 
