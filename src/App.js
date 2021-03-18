@@ -1,12 +1,12 @@
 import './App.css'
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from './Main'
+import Home from './components/homePage/Home'
 import Running_Workshops from './components/Page1'
 import Fitness_For_Organizations from './components/Page2'
 import Beginners_Running_Groups from './components/Page3'
-import Blog from './components/blog/Blog'
-import _404 from './components/404'
+import Blog from './components/blogPage/Blog'
+import _404 from './components/others/404'
 import Layout from './components/others/Layout'
 
 function App() {

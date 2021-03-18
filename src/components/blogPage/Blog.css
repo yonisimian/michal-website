@@ -1,11 +1,32 @@
+/* ------- Blog --------- */
+#blogHeader, #blogSection {
+    padding: 0;
+}
+
+#blogSection .jumbotron {
+    padding: 0;
+}
+
 .row {
     margin: 0;
+}
+
+/* ------- Header --------- */
+
+a {
+    text-decoration: none!important;
+}
+
+/* ------- ArtList --------- */
+
+.pagination {
+    margin: 30px 0;
 }
 
 /* ------- Item --------- */
 .card {
     width: '18rem';
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .row:nth-of-type(2) .col .card {

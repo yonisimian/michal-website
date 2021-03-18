@@ -15,6 +15,10 @@
   margin: 2px 9px 2px 9px;
 }
 
+section .jumbotron {
+  background-color: transparent;
+}
+
 footer {
   padding:40px 0;
   background-color:#ffffff;

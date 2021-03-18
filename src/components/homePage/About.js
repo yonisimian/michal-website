@@ -1,7 +1,8 @@
 import React from 'react'
+import { Section } from '../others/Utils'
 
 const About = () => (
-    <div>
+    <Section id="aboutSection" backgroundColor="#FDD0C1">
         <p>about</p>
         <p>
             bla bla bla bla bla bla bla
@@ -19,7 +20,7 @@ const About = () => (
             red bla<br />
             blu bla<br />
         </p>
-    </div>
+    </Section>
 )
 
 export default About;

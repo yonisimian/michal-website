@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 import { Jumbotron, Container } from 'react-bootstrap'
 import './utils.css'
 
-export const Header = () => (
-    <Jumbotron fluid className="jumbo">
-        <Container>
-            <h1>ברוכים הבאים!</h1>
-            <p>אני מיכל סימיאן וזה האתר שלי</p>
-        </Container>
-    </Jumbotron>
+export const Section = (props) => (
+    <section id={props.id} style={{backgroundColor: props.backgroundColor}}>
+        <Jumbotron fluid>
+            <Container>
+                {props.children}
+            </Container>
+        </Jumbotron>
+    </section>
 )
 
 export const Footer = () => (

@@ -19,8 +19,8 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-                <NavLink to="/" onClick={scrollToHome}>בית</NavLink>
-                <NavLink to="/" onClick={scrollToAbout}>אודות</NavLink>
+                <NavLink to="/#Home" onClick={scrollToHome}>בית</NavLink>
+                <NavLink to="/#About" onClick={scrollToAbout}>אודות</NavLink>
                 {/* <NavDropdown title={<span className="text-dark">Dropdown</span>} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -32,7 +32,7 @@ const NavBar = () => {
                 <NavLink to="/page2" onClick={scrollToTop}>אימוני כושר לארגונים</NavLink>
                 <NavLink to="/page3" onClick={scrollToTop}>קבוצות ריצה למתחילים</NavLink>
                 <NavLink to="/Blog" onClick={scrollToTopBlog}>בלוג</NavLink>
-                <NavLink to="/" onClick={scrollToContact}>צרו קשר</NavLink>
+                <NavLink to="/#Contact" onClick={scrollToContact}>צרו קשר</NavLink>
             </Nav>
             </Navbar.Collapse>
         </Navbar>
