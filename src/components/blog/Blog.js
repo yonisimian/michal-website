@@ -3,8 +3,7 @@ import Header from './BlogHeader'
 import Article from './Article'
 import Item from './Item'
 import Pagination from '../others/Pagination'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col } from 'react-bootstrap'
 import Data from './demoDB.json'
 import "./Blog.css"
 
@@ -30,47 +29,49 @@ const Blog = () => {
                 <Header />
             </span>
             <section id="blogSection" style={{padding: "0"}}>
+                <Container>
                 {
                     article ? <Article
                                     src={article}
                                     closeArticle={() => setArticle()}
                                 />
-                :
-                <>
-                <Row>
-                    <Col/>
-                    <Col>
-                        <Pagination data={data} />
-                    </Col>
-                    <Col/>
-                </Row>
-                {items
-                .filter((item, index) => index >= curPage * itemsPerPage && index < (curPage + 1) * itemsPerPage)
-                .map((item, index) => {
-                    return (
+                    :
                     <>
                     <Row>
+                        <Col/>
                         <Col>
-                            <Item
-                                key={index}
-                                title={item.title}
-                                summary={item.summary}
-                                createdAt={item.createdAt}
-                                setArticle={() => setArticle(item.src)}/>
+                            <Pagination data={data} />
                         </Col>
+                        <Col/>
                     </Row>
-                    </>)
-                })
+                    {items
+                    .filter((item, index) => index >= curPage * itemsPerPage && index < (curPage + 1) * itemsPerPage)
+                    .map((item, index) => {
+                        return (
+                        <>
+                        <Row>
+                            <Col>
+                                <Item
+                                    key={index}
+                                    title={item.title}
+                                    summary={item.summary}
+                                    createdAt={item.createdAt}
+                                    setArticle={() => setArticle(item.src)}/>
+                            </Col>
+                        </Row>
+                        </>)
+                    })
+                    }
+                    <Row>
+                        <Col/>
+                        <Col>
+                            <Pagination data={data} />
+                        </Col>
+                        <Col/>
+                    </Row>
+                    </>
                 }
-                <Row>
-                    <Col/>
-                    <Col>
-                        <Pagination data={data} />
-                    </Col>
-                    <Col/>
-                </Row>
-                </>
-                }
+                </Container>
             </section>
         </>
     )
