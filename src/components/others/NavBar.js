@@ -13,7 +13,9 @@ const NavBar = () => {
 
     return (
         <Navbar variant="light" expand="lg" sticky="top">
-            <Navbar.Brand href="/"><Image src={logo} alt="מיכל סימיאן" className="App-logo" /></Navbar.Brand>
+            <Navbar.Brand onClick={() => scrollToTop()}>
+                <NavLink to="/"><Image src={logo} alt="מיכל סימיאן" className="App-logo" /></NavLink>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">

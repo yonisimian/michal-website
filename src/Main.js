@@ -6,13 +6,13 @@ import Contact from './components/Contact'
 const Main = () => {
     return (
         <>
-            <section id="homeSection">
+            <section id="homeSection" style={{backgroundColor: "#82E4D5"}}>
                 <Home/>
             </section>
-            <section id="aboutSection">
+            <section id="aboutSection" style={{backgroundColor: "#FDD0C1"}}>
                 <About/>
             </section>
-            <section id="contactSection">
+            <section id="contactSection" style={{backgroundColor: "#E6E72E"}}>
                 <Contact/>
             </section>
         </>

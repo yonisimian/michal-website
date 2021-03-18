@@ -5,6 +5,7 @@ import Pagination from '../others/Pagination'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Data from './demoDB.json'
+import "./Blog.css"
 
 const Blog = () => {
     let [article, setArticle] = useState()
@@ -13,14 +14,16 @@ const Blog = () => {
     const [curSection, setCurSection] = useState(0)
     const itemsPerPage = 3
     const pagesPerSection = 5
-    const pagination = <Pagination
+    const data = { items, itemsPerPage, curPage, setCurPage, pagesPerSection, curSection, setCurSection }
+    const pagination = (top) => <Pagination
                             items={items}
                             itemsPerPage={itemsPerPage}
                             curPage={curPage}
                             setCurPage={setCurPage}
                             pagesPerSection={pagesPerSection}
                             curSection={curSection}
-                            setCurSection={setCurSection} />
+                            setCurSection={setCurSection}
+                            {...top} />
 
     /*useEffect(() => {
         fetch('/getAllArticles')
@@ -29,7 +32,7 @@ const Blog = () => {
     }, [])*/
 
     return (
-        <section id="blogSection">
+        <section id="blogSection" style={{padding: "0"}}>
             {
                 article ? <Article
                                 src={article}
@@ -39,7 +42,9 @@ const Blog = () => {
             <>
             <Row>
                 <Col/>
-                <Col>{pagination}</Col>
+                <Col>
+                    <Pagination data={data} top />
+                </Col>
                 <Col/>
             </Row>
             {items
@@ -62,7 +67,9 @@ const Blog = () => {
             }
             <Row>
                 <Col/>
-                <Col>{pagination}</Col>
+                <Col>
+                    <Pagination data={data} bottom />
+                </Col>
                 <Col/>
             </Row>
             </>

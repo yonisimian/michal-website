@@ -2,7 +2,7 @@ import React from 'react';
 import Pagination from 'react-bootstrap/Pagination'
 
 const Paging = (props) => {
-    const {items, itemsPerPage, curPage, setCurPage, pagesPerSection, curSection, setCurSection} = props
+    const {items, itemsPerPage, curPage, setCurPage, pagesPerSection, curSection, setCurSection} = props.data
     const maxPage = Math.max(0, Math.floor((items.length - 1) / itemsPerPage))
     const maxSection = Math.max(0, Math.floor((maxPage) / pagesPerSection))
 
@@ -41,7 +41,7 @@ const Paging = (props) => {
     }
 
     return (
-        <Pagination dir="ltr">
+        <Pagination dir="ltr" style={props.top ? {marginTop: "10px", marginBottom: "0"} : (props.bottom ? {marginTop: "0", marginBottom: "10px"} : {margin: "10px 0"})}>
             <Pagination.First onClick={setFirstPage} />
             <Pagination.Prev onClick={setPrevPage} />
             {curSection !== 0 &&

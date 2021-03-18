@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import './item.css'
 
 const Item = (props) => {
     const [classes, setClasses] = useState('')
