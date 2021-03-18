@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Header from './BlogHeader'
 import Article from './Article'
 import Item from './Item'
 import Pagination from '../others/Pagination'
@@ -14,16 +15,8 @@ const Blog = () => {
     const [curSection, setCurSection] = useState(0)
     const itemsPerPage = 3
     const pagesPerSection = 5
+
     const data = { items, itemsPerPage, curPage, setCurPage, pagesPerSection, curSection, setCurSection }
-    const pagination = (top) => <Pagination
-                            items={items}
-                            itemsPerPage={itemsPerPage}
-                            curPage={curPage}
-                            setCurPage={setCurPage}
-                            pagesPerSection={pagesPerSection}
-                            curSection={curSection}
-                            setCurSection={setCurSection}
-                            {...top} />
 
     /*useEffect(() => {
         fetch('/getAllArticles')
@@ -32,49 +25,54 @@ const Blog = () => {
     }, [])*/
 
     return (
-        <section id="blogSection" style={{padding: "0"}}>
-            {
-                article ? <Article
-                                src={article}
-                                closeArticle={() => setArticle()}
-                            />
-            :
-            <>
-            <Row>
-                <Col/>
-                <Col>
-                    <Pagination data={data} top />
-                </Col>
-                <Col/>
-            </Row>
-            {items
-            .filter((item, index) => index >= curPage * itemsPerPage && index < (curPage + 1) * itemsPerPage)
-            .map((item, index) => {
-                return (
+        <>
+            <span id="blogHeader">
+                <Header />
+            </span>
+            <section id="blogSection" style={{padding: "0"}}>
+                {
+                    article ? <Article
+                                    src={article}
+                                    closeArticle={() => setArticle()}
+                                />
+                :
                 <>
                 <Row>
+                    <Col/>
                     <Col>
-                        <Item
-                            key={index}
-                            title={item.title}
-                            summary={item.summary}
-                            createdAt={item.createdAt}
-                            setArticle={() => setArticle(item.src)}/>
+                        <Pagination data={data} />
                     </Col>
+                    <Col/>
                 </Row>
-                </>)
-            })
-            }
-            <Row>
-                <Col/>
-                <Col>
-                    <Pagination data={data} bottom />
-                </Col>
-                <Col/>
-            </Row>
-            </>
-            }
-        </section>
+                {items
+                .filter((item, index) => index >= curPage * itemsPerPage && index < (curPage + 1) * itemsPerPage)
+                .map((item, index) => {
+                    return (
+                    <>
+                    <Row>
+                        <Col>
+                            <Item
+                                key={index}
+                                title={item.title}
+                                summary={item.summary}
+                                createdAt={item.createdAt}
+                                setArticle={() => setArticle(item.src)}/>
+                        </Col>
+                    </Row>
+                    </>)
+                })
+                }
+                <Row>
+                    <Col/>
+                    <Col>
+                        <Pagination data={data} />
+                    </Col>
+                    <Col/>
+                </Row>
+                </>
+                }
+            </section>
+        </>
     )
 }
 

@@ -41,7 +41,7 @@ const Paging = (props) => {
     }
 
     return (
-        <Pagination dir="ltr" style={props.top ? {marginTop: "10px", marginBottom: "0"} : (props.bottom ? {marginTop: "0", marginBottom: "10px"} : {margin: "10px 0"})}>
+        <Pagination dir="ltr" style={{margin: "20px 0"}}>
             <Pagination.First onClick={setFirstPage} />
             <Pagination.Prev onClick={setPrevPage} />
             {curSection !== 0 &&

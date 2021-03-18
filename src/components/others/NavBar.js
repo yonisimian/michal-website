@@ -9,7 +9,7 @@ const NavBar = () => {
     const scrollToHome = () => scrollToElementID("homeSection")
     const scrollToAbout = () => scrollToElementID("aboutSection")
     const scrollToContact = () => scrollToElementID("contactSection")
-    const scrollToTopBlog = () => scrollToElementID("blogSection")
+    const scrollToTopBlog = () => scrollToElementID("blogHeader")
 
     return (
         <Navbar variant="light" expand="lg" sticky="top">

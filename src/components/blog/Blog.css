@@ -1,7 +1,19 @@
+.row {
+    margin: 0;
+}
+
 /* ------- Item --------- */
 .card {
     width: '18rem';
     margin: 10px;
+}
+
+.row:nth-of-type(2) .col .card {
+    margin-top: 0;
+}
+
+.row:nth-last-of-type(2) .col .card {
+    margin-bottom: 0;
 }
 
 .btn {

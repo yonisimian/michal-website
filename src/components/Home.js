@@ -1,22 +1,13 @@
 import React from 'react'
+import {Jumbotron, Container} from 'react-bootstrap'
 
 const Home = () => (
-    <>
-        <p>home</p>
-        <hr></hr>
-        <p>
-            bla bla bla bla bla bla bla bla bla<br />
-            bla bla bla bla bla bla bla bla bla bla<br />
-            bla bla bla bla bla bla bla bla bla<br />
-        </p>
-        <p>
-            more bla bla bla<br />
-            bla bla bla bla bla bla bla bla bla<br/>
-            bla bla bla bla bla bla bla bla bla<br/>
-            bla bla bla
-        </p>
-        bla
-    </>
+    <Jumbotron fluid style={{backgroundColor: "transparent"}}>
+        <Container>
+            <h1>ברוכים הבאים!</h1>
+            <p>אני מיכל סימיאן וזה האתר שלי</p>
+        </Container>
+    </Jumbotron>
 )
 
 export default Home;

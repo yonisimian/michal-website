@@ -6,7 +6,7 @@ import { Header, Footer } from './Utils'
 const Layout = (props) => (
     <>
         <NavBar />
-        <Header />
+        {/* <Header /> */}
         <Container className="main-container">
             {props.children}
         </Container>

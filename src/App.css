@@ -14,12 +14,16 @@
   pointer-events: none;
 }
 
+section {
+  margin: 0;
+  padding: 5px 20px 5px 20px;
+}
+
 .main-container {
   min-width: 100%;
   padding: 0;
 }
 
-section {
+.jumbotron {
   margin: 0;
-  padding: 5px 20px 5px 20px;
 }
