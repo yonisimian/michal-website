@@ -8,7 +8,7 @@ const Home = () => {
         <>
             <Welcome />
             <About />
-            <Contact />
+            <Contact title="צרו איתנו קשר" />
         </>
     )
 }

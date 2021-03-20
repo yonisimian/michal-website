@@ -19,7 +19,7 @@ section {
   padding: 5px 20px 5px 20px;
 }
 
-#aboutSection {
+#aboutSection, #contactSection {
   color: white;
 }
 

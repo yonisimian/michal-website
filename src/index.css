@@ -7,6 +7,7 @@ body {
   'Guttman-CourMir', 'Lucida Sans Unicode', 'Rod', 'Segoe UI Light', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   text-align: right;
 
   background-image: url("./assets/demoBG.jpg");
