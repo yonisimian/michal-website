@@ -8,9 +8,7 @@ const Home = () => {
         <>
             <Welcome />
             <About />
-            <section id="contactSection" style={{backgroundColor: "#E6E72E"}}>
-                <Contact />
-            </section>
+            <Contact />
         </>
     )
 }

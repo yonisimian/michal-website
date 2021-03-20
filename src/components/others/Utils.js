@@ -37,7 +37,7 @@ const getNavbarHeight = () => {
     if (!nav)
         return
 
-    let navHeight = parseFloat(window.getComputedStyle(nav).getPropertyValue('height'))
+    let navHeight = parseInt(window.getComputedStyle(nav).getPropertyValue('height'))
     return (navHeight) ?? 0
 }
 

@@ -6,6 +6,7 @@ import Running_Workshops from './components/Page1'
 import Fitness_For_Organizations from './components/Page2'
 import Beginners_Running_Groups from './components/Page3'
 import Blog from './components/blogPage/Blog'
+import Admin from './components/adminPage/Admin'
 import _404 from './components/others/404'
 import Layout from './components/others/Layout'
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/page2" component={Fitness_For_Organizations} />
             <Route path="/page3" component={Beginners_Running_Groups} />
             <Route path="/blog" component={Blog} />
+            <Route path="/admin" component={Admin} />
             <Route component={_404} />
           </Switch>
         </Layout>

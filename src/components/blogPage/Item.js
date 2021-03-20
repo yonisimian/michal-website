@@ -16,7 +16,7 @@ const Item = (props) => {
             <Card.Body onDoubleClick={() => setClasses(classes === '' ? 'box bounce-7' : '')}>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>{props.summary}</Card.Text>
-                <Button variant="primary" onClick={readArticle}>לקריאת המאמר -&gt;</Button>
+                <Button variant="outline-secondary" onClick={readArticle}>לקריאת המאמר -&gt;</Button>
             </Card.Body>
             <Card.Text className="createdAt">{props.createdAt}</Card.Text>
         </Card>
