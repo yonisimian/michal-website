@@ -31,3 +31,12 @@ section {
 .jumbotron {
   margin: 0;
 }
+
+.pagination .page-link {
+  color: black;
+}
+
+.page-item.active .page-link {
+  background-color: #1B3547;
+  border-color: #1B3547;
+}
