@@ -15,7 +15,7 @@
 }
 
 section {
-  margin: 100px 0;
+  margin: 0;
   padding: 5px 20px 5px 20px;
 }
 
@@ -33,7 +33,7 @@ section {
 }
 
 .pagination .page-link {
-  color: black;
+  color: #1B3547;
 }
 
 .page-item.active .page-link {

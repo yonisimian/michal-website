@@ -12,7 +12,7 @@ const NavBar = () => {
     const scrollToTopBlog = () => scrollToElementID("blogHeader")
 
     return (
-        <Navbar variant="dark" expand="lg" sticky="top">
+        <Navbar variant="dark" expand="lg" fixed="top">
             <Navbar.Brand onClick={() => scrollToTop()}>
                 <NavLink to="/">מיכל סימיאן</NavLink>
                 {/* <Image src={logo} alt="מיכל סימיאן" className="App-logo" /> */}
