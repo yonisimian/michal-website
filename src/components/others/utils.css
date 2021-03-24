@@ -1,13 +1,11 @@
 .navbar {
-  mask-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 100 100" xml:space="preserve"><style type="text/css">.blur{filter:url(%23softedge);}</style><filter id="softedge"><feGaussianBlur stdDeviation="3.5"></feGaussianBlur></filter><g class="blur"><rect x="0" y="-10" width="100" height="90"/></g></svg>'); 
-	mask-size: cover; 
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 100 100" xml:space="preserve"><style type="text/css">.blur{filter:url(%23softedge);}</style><filter id="softedge"><feGaussianBlur stdDeviation="3.5"></feGaussianBlur></filter><g class="blur"><rect x="-20" y="-25" width="140" height="120"/></g></svg>'); 
+	-webkit-mask-size: cover;
+  mask-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 100 100" xml:space="preserve"><style type="text/css">.blur{filter:url(%23softedge);}</style><filter id="softedge"><feGaussianBlur stdDeviation="3.5"></feGaussianBlur></filter><g class="blur"><rect x="-20" y="-25" width="140" height="120"/></g></svg>'); 
+	mask-size: cover;
   background-color: rgba(0, 0, 0, 0.33);
   backdrop-filter: blur(5px);
   font-family: Guttman Hatzvi;
-  /*padding-bottom: 110% of navbar's height;*/
-  padding-bottom: 18px;
-  /*padding-bottom: 100% of navbar's height;*/
-  margin-bottom: -100px;
 }
 
 .navbar .ml-auto {

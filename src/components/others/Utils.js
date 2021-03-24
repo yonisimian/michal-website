@@ -35,9 +35,9 @@ export const Footer = () => (
 const getNavbarHeight = () => {
     let nav = document.getElementsByClassName('navbar')[0]
     if (!nav)
-        return
+        return 0
 
-    let navHeight = parseInt(window.getComputedStyle(nav).getPropertyValue('height'))
+    let navHeight = parseInt(window.getComputedStyle(nav).getPropertyValue('height')) - 4
     return (navHeight) ?? 0
 }
 
