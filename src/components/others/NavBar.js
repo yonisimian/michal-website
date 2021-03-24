@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Nav, Navbar/*, NavDropdown*/, Image } from 'react-bootstrap';
-import logo from '../../assets/logo-monochrome.svg'
+import { Nav, Navbar/*, NavDropdown, Image*/ } from 'react-bootstrap';
+// import logo from '../../assets/logo-monochrome.svg'
 import { scrollToElementID, scrollToTop } from './Utils'
 
 const NavBar = () => {
@@ -12,7 +12,7 @@ const NavBar = () => {
     const scrollToTopBlog = () => scrollToElementID("blogHeader")
 
     return (
-        <Navbar variant="dark" expand="lg" fixed="top">
+        <Navbar variant="dark" expand="lg" sticky="top">
             <Navbar.Brand onClick={() => scrollToTop()}>
                 <NavLink to="/">מיכל סימיאן</NavLink>
                 {/* <Image src={logo} alt="מיכל סימיאן" className="App-logo" /> */}
