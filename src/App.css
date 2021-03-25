@@ -15,12 +15,13 @@
 }
 
 section {
-  margin: 0;
+  background-color: rgba(233, 241, 239, 1);
   padding: 5px 20px 5px 20px;
+  margin: 0;
 }
 
-#aboutSection, #contactSection {
-  color: white;
+section, .react-parallax {
+  scroll-snap-align: start;
 }
 
 .main-container {
@@ -39,4 +40,20 @@ section {
 .page-item.active .page-link {
   background-color: #1B3547;
   border-color: #1B3547;
+}
+
+.break-things {
+  background-color: #f3f3f3;
+}
+
+/* -------- Home Page --------- */
+article {
+  /* height: 100hv;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto; */
+  /* scroll-padding-top: 50px; */
+}
+
+#aboutSection, #contactSection {
+  color: #dedede;
 }

@@ -20,12 +20,12 @@
   margin: 2px 9px 2px 9px;
 }
 
-section, footer {
+footer {
   background-color: rgba(233, 241, 239, 1);
   /* backdrop-filter: blur(20px); */
 }
 
-section .jumbotron {
+.jumbotron {
   background-color: transparent;
 }
 

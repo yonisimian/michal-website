@@ -10,7 +10,7 @@ import image5 from '../../assets/demo5.jpg'
 
 const Home = () => {
     return (
-        <>
+        <article>
             <ParallaxImage image={image2} />
             <Welcome />
             <ParallaxImage image={image3} />
@@ -18,7 +18,7 @@ const Home = () => {
             <ParallaxImage image={image4} />
             <Contact title="צרו איתנו קשר" />
             <ParallaxImage image={image5} />
-        </>
+        </article>
     )
 }
 
