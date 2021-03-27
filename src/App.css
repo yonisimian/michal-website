@@ -47,12 +47,9 @@ section, .react-parallax {
 }
 
 /* -------- Home Page --------- */
-article {
-  /* height: 100hv;
-  scroll-snap-type: y mandatory;
-  overflow-y: auto; */
-  /* scroll-padding-top: 50px; */
-}
+/*article {
+  scroll-padding-top: 50px;
+}*/
 
 #aboutSection, #contactSection {
   color: #dedede;

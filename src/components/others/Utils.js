@@ -32,12 +32,12 @@ export const Footer = () => (
     </footer>
 )
 
-const getNavbarHeight = () => {
+export const getNavbarHeight = () => {
     let nav = document.getElementsByClassName('navbar')[0]
     if (!nav)
         return 0
 
-    let navHeight = parseInt(window.getComputedStyle(nav).getPropertyValue('height')) - 4
+    let navHeight = parseInt(window.getComputedStyle(nav).getPropertyValue('height'))
     return (navHeight) ?? 0
 }
 

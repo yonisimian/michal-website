@@ -14,7 +14,6 @@
 }
 
 .navbar a {
-  /* color: #343a40; */
   color: rgba(233, 241, 239, 1);
   text-decoration: none!important;
   margin: 2px 9px 2px 9px;
@@ -23,6 +22,7 @@
 footer {
   background-color: rgba(233, 241, 239, 1);
   /* backdrop-filter: blur(20px); */
+  scroll-snap-align: start;
 }
 
 .jumbotron {
@@ -30,7 +30,7 @@ footer {
 }
 
 footer {
-  padding:40px 0;
+  padding: 40px 0;
   /* background-color:#E9F1EF; */
   color:#4b4c4d;
 }
